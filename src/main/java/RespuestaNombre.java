@@ -45,7 +45,15 @@ public class RespuestaNombre extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String name = request.getParameter("nombre");
+		
+		PrintWriter writer= response.getWriter();
+		writer.println("<html>");
+		writer.println("<body>");
+		writer.println("Buenas "+name);
+		writer.println("<a href=\"index.html\"><button>Atras</button></a>");
+		writer.println("</body>");
+		writer.println("</html>"); 
 	}
 
 }
