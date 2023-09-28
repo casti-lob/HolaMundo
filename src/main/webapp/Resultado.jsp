@@ -15,13 +15,11 @@
 		double num2 = Double.parseDouble(request.getParameter("num2"));
 		int ope = Integer.parseInt(request.getParameter("operator"));
 		double result = 0;
-		c.setnum1(num1);
-		if(ope ==1){
-			result = num1+num2;
-		}else{
-			result = num1-num2;
-		}
-		out.println("El resultado es "+result);
+		c.setNum1(num1);
+		c.setNum2(num2);
+		c.setOper(ope);
+		
+		out.println("El resultado es "+c.calculo());
 	%>
 	<a href="Calculadora.html"><button>Atras</button></a>
 </body>
